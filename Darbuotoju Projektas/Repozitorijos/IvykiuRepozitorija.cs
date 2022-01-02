@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace Darbuotoju_Projektas.Repozitorijos
 {
-    internal class IvykiuRepozitorija
+    public class IvykiuRepozitorija
     {
+        public List<Ivykis> ivykiai = new List<Ivykis>();
+        public IvykiuRepozitorija()
+        {
+            ivykiai.Add(new Ivykis(1, 1, "Pietauti"));
+        }
     }
 }

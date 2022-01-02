@@ -16,9 +16,9 @@ namespace Darbuotoju_Projektas
         {
 
         }
-        public Vartai (int VartuId, string Pavadinimas, int DarbuotojoId)
+        public Vartai (int Id, string Pavadinimas, int DarbuotojoId)
         {
-            VartuId = VartuId;
+            Id = Id;
             Pavadinimas = Pavadinimas;
             DarbuotojoId = DarbuotojoId;
         }

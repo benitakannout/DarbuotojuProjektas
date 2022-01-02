@@ -13,8 +13,17 @@ namespace Darbuotoju_Projektas
         public string Pavadinimas { get; set; }
         public TimeSpan Trukme { get; set; }
 
-        public int Pietauti = 45;
-        public int Parukyti = 15;
-        public int Tualetas = 10;
+        public Ivykis()
+        {
+
+        }
+        public Ivykis(int Id, int DarbuotojoId, string Pavadinimas, TimeSpan Trukme)
+        {
+            Id = Id;
+            DarbuotojoId = DarbuotojoId;
+            Pavadinimas = Pavadinimas;
+            Trukme = new IvykisManager.TrukmePagalPavadinima(Pavadinimas);
+        }
+
     }
 }
