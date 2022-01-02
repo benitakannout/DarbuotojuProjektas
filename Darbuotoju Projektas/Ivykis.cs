@@ -22,7 +22,7 @@ namespace Darbuotoju_Projektas
             Id = Id;
             DarbuotojoId = DarbuotojoId;
             Pavadinimas = Pavadinimas;
-            Trukme = new IvykisManager.TrukmePagalPavadinima(Pavadinimas);
+            Trukme = Trukme;
         }
 
     }

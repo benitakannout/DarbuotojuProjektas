@@ -39,5 +39,9 @@ namespace Darbuotoju_Projektas.Repozitorijos
             var darbuotojoVartai = vartai.FirstOrDefault(x => x.Id == Id);
             return darbuotojoVartai;
         }
+        public List<Vartai> Retrieve()
+        {
+            return vartai;
+        }
     }
 }
