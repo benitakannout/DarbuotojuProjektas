@@ -49,5 +49,15 @@ namespace Darbuotoju_Projektas.Repozitorijos
             ivykiai.Add(new Ivykis(3, 9, "Tualetas", TimeSpan.FromMinutes(10)));
             ivykiai.Add(new Ivykis(3, 10, "Tualetas", TimeSpan.FromMinutes(10)));
         }
+        public Ivykis Retrieve(int Id)
+        {
+            var ivykis = ivykiai.FirstOrDefault(x => x.Id == Id);
+            return ivykis;
+        }
+
+        public List<Ivykis> Retrieve()
+        {
+            return ivykiai;
+        }
     }
 }
