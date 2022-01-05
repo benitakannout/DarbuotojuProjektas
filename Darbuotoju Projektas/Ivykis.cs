@@ -9,7 +9,7 @@ namespace Darbuotoju_Projektas
     public class Ivykis
     {
         public int Id { get; set; }
-        public int DarbuotojoId { get; set; }
+        public string Darbuotojas { get; set; }
         public string Pavadinimas { get; set; }
         public TimeSpan Trukme { get; set; }
 
@@ -17,10 +17,10 @@ namespace Darbuotoju_Projektas
         {
 
         }
-        public Ivykis(int Id, int DarbuotojoId, string Pavadinimas, TimeSpan Trukme)
+        public Ivykis(int Id, string Darbuotojas, string Pavadinimas, TimeSpan Trukme)
         {
             Id = Id;
-            DarbuotojoId = DarbuotojoId;
+            Darbuotojas = Darbuotojas;
             Pavadinimas = Pavadinimas;
             Trukme = Trukme;
         }

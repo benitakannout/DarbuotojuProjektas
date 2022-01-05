@@ -24,9 +24,9 @@ namespace Darbuotoju_Projektas.Repozitorijos
             zmones.Add(new Zmogus(10, "Rasa"));
         }
 
-        public Zmogus Retrieve(int Id)
+        public Zmogus Retrieve(string Vardas)
         {
-            var zmogus = zmones.FirstOrDefault(x => x.Id == Id);
+            var zmogus = zmones.FirstOrDefault(x => x.Vardas == Vardas);
             return zmogus;
         }
 

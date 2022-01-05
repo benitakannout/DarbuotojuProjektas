@@ -20,6 +20,25 @@ namespace Darbuotoju_Projektas
             _zmoniuRepozitorija = zmoniuRepozitorija;
         }
 
+        public List<DarboValanduSarasas> ValanduSarasas (IvykiuRepozitorija ivykiuRepozitorija, ZmoniuRepozitorija zmoniuRepozitorija)
+        {
+            var zmones = zmoniuRepozitorija.Retrieve();
+            var items = new List<DarboValanduSarasas>();
+
+            foreach (var zmogus in zmones)
+            {
+                var item = new DarboValanduSarasas();
+                item.Vardas = zmogus.Vardas;
+                var ivykiai = ivykiuRepozitorija.RetrieveByPerson(item.Vardas);
+                item.Valandos = TimeSpan.FromHours(9);
+
+                foreach (var ivykis in ivykiai)
+                {
+                    item.Valandos -= ivykis.Trukme;
+                }
+            }
+            return items;
+        }
 
     }
 }
